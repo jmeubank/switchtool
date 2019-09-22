@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="switchtool" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="switchtool">
+				<Option output="switchtool" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DPCRE_STATIC=1" />
+					<Add option="-DTIXML_USE_STL=1" />
+					<Add directory="$(#libssh2)/include" />
+					<Add directory="$(#pcre)/include" />
+					<Add directory="." />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="ssh2" />
+					<Add library="ws2_32" />
+					<Add library="pcrecpp" />
+					<Add library="pcre" />
+					<Add directory="$(#libssh2)/lib" />
+					<Add directory="$(#pcre)/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename=".hgignore" />
+		<Unit filename="Makefile" />
+		<Unit filename="calixaeont.cpp" />
+		<Unit filename="calixeseries.cpp" />
+		<Unit filename="ciscoios.cpp" />
+		<Unit filename="commands1.txt" />
+		<Unit filename="common.hpp" />
+		<Unit filename="host.hpp" />
+		<Unit filename="junosswitch.cpp" />
+		<Unit filename="libtelnet/libtelnet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="proptree.cpp" />
+		<Unit filename="proptree.hpp" />
+		<Unit filename="snmp.cpp" />
+		<Unit filename="snmp.hpp" />
+		<Unit filename="terminal.cpp" />
+		<Unit filename="terminal.hpp" />
+		<Unit filename="tinyxml/tinystr.cpp" />
+		<Unit filename="tinyxml/tinyxml.cpp" />
+		<Unit filename="tinyxml/tinyxmlerror.cpp" />
+		<Unit filename="tinyxml/tinyxmlparser.cpp" />
+		<Unit filename="ubnt-airos.cpp" />
+		<Unit filename="yajl/src/yajl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_buf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_encode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_gen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_lex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_tree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="yajl/src/yajl_version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
